@@ -8,3 +8,7 @@ build/*
 #Sublime text
 *.sublime-project
 *.sublime-workspace
+
+#Clangd files
+compile_commands.json
+/.cache/
