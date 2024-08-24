@@ -1,0 +1,10 @@
+#Remove builds
+*.exe
+*.out
+
+#Cmake
+build/*
+
+#Sublime text
+*.sublime-project
+*.sublime-workspace
