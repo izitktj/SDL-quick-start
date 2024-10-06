@@ -1,8 +1,16 @@
-#include <windows.h>
-#include <SDL.h>
 #include <iostream>
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+#define SDL_MAIN_HANDLED
+#include <SDL.h>
+
+
+// You also can use WinMain but you need to do some setup, like:
+// insted of using main use: ´int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)´
+// add ´#include <windows.h>´
+// remove the ´#define SDL_MAIN_HANDLED´
+// and uncoment ´set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -mwindows")´ in CMakeLists.txt
+
+int main(int argc, char** argv) {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         return 1;
     }
